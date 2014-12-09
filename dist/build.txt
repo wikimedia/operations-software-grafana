@@ -9,6 +9,7 @@ app/components/settings.js
 vendor/angular/angular.js
 vendor/bootstrap/bootstrap.js
 vendor/angular/angular-route.js
+vendor/angular/angular-sanitize.js
 vendor/angular/timepicker.js
 vendor/angular/datepicker.js
 vendor/angular/angular-strap.js
@@ -21,7 +22,6 @@ vendor/moment.js
 app/components/kbn.js
 vendor/require/text.js
 vendor/modernizr-2.6.1.js
-app/filters/all.js
 vendor/jquery/jquery.flot.js
 app/services/alertSrv.js
 app/services/utilSrv.js
@@ -47,6 +47,9 @@ app/services/dashboard/dashboardKeyBindings.js
 app/services/dashboard/dashboardSrv.js
 app/services/dashboard/dashboardViewStateSrv.js
 app/services/all.js
+app/features/panellinkeditor/linkSrv.js
+app/features/panellinkeditor/module.js
+app/features/all.js
 app/directives/arrayJoin.js
 app/directives/dashUpload.js
 app/directives/panelMenu.js
@@ -60,8 +63,6 @@ app/directives/confirmClick.js
 app/directives/configModal.js
 vendor/spectrum.js
 app/directives/spectrumPicker.js
-app/directives/grafanaGraph.tooltip.js
-app/directives/grafanaGraph.js
 vendor/tagsinput/bootstrap-tagsinput.js
 app/directives/bootstrap-tagsinput.js
 app/directives/bodyClass.js
@@ -74,6 +75,7 @@ app/directives/grafanaVersionCheck.js
 app/directives/dropdown.typeahead.js
 app/directives/influxdbFuncEditor.js
 app/directives/all.js
+app/filters/all.js
 app/controllers/grafanaCtrl.js
 app/controllers/dashboardCtrl.js
 vendor/filesaver.js
@@ -105,14 +107,16 @@ app/components/partials.js
 app/components/timeSeries.js
 app/components/panelmeta.js
 app/panels/graph/seriesOverridesCtrl.js
-vendor/jquery/jquery.flot.time.js
-app/panels/graph/legend.js
+app/panels/graph/graph.tooltip.js
 vendor/jquery/jquery.flot.events.js
 vendor/jquery/jquery.flot.selection.js
+vendor/jquery/jquery.flot.time.js
 vendor/jquery/jquery.flot.stack.js
 vendor/jquery/jquery.flot.stackpercent.js
 vendor/jquery/jquery.flot.fillbelow.js
 vendor/jquery/jquery.flot.crosshair.js
+app/panels/graph/graph.js
+app/panels/graph/legend.js
 app/panels/graph/module.js
 text!panels/graph/module.html
 app/panels/singlestat/singleStatPanel.js
