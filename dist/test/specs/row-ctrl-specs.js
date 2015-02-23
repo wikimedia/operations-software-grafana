@@ -1,4 +1,4 @@
-/*! grafana - v1.9.0 - 2014-12-09
- * Copyright (c) 2014 Torkel Ödegaard; Licensed Apache License */
+/*! grafana - v1.9.1 - 2015-02-23
+ * Copyright (c) 2015 Torkel Ödegaard; Licensed Apache License */
 
-define(["./helpers","controllers/row"],function(a){describe("RowCtrl",function(){var b=new a.ControllerTestContext;beforeEach(module("grafana.controllers")),beforeEach(b.providePhase()),beforeEach(b.createControllerPhase("RowCtrl"))})});
+define(["helpers","features/dashboard/rowCtrl"],function(a){describe("RowCtrl",function(){var b=new a.ControllerTestContext;beforeEach(module("grafana.controllers")),beforeEach(b.providePhase()),beforeEach(b.createControllerPhase("RowCtrl"))})});

@@ -8,10 +8,10 @@
     <meta name="google" value="notranslate">
 
     <title>Grafana</title>
-    <link rel="stylesheet" href="css/grafana.dark.min.968e043c.css" title="Dark">
+    <link rel="stylesheet" href="css/grafana.dark.min.89f815fb.css" title="Dark">
     <link rel="icon" type="image/png" href="img/fav32.png">
 
-    <script src="app/app.26f0db5e.js"></script>
+    <script src="app/app.cff04fb1.js"></script>
 
     <script>require(['app'], function (app) { app.boot(); })</script>
 
@@ -19,12 +19,12 @@
 
   <body ng-cloak ng-controller="GrafanaCtrl">
 
-    <link rel="stylesheet" href="css/grafana.light.min.4a623d02.css" ng-if="grafana.style === 'light'">
+    <link rel="stylesheet" href="css/grafana.light.min.d2a77946.css" ng-if="grafana.style === 'light'">
 
 		<div class="page-alert-list">
 			<div ng-repeat='alert in dashAlerts.list' class="alert-{{alert.severity}} alert">
 				<button type="button" class="alert-close" ng-click="dashAlerts.clear(alert)">
-					<i class="icon-remove-sign"></i>
+					<i class="fa fa-times-circle"></i>
 				</button>
 				<div class="alert-title">{{alert.title}}</div>
 				<div ng-bind-html='alert.text'></div>

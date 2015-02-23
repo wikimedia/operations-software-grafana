@@ -1,4 +1,4 @@
-/*! grafana - v1.9.0 - 2014-12-09
- * Copyright (c) 2014 Torkel Ödegaard; Licensed Apache License */
+/*! grafana - v1.9.1 - 2015-02-23
+ * Copyright (c) 2015 Torkel Ödegaard; Licensed Apache License */
 
-define(["angular","app","lodash","require"],function(a,b,c){var d=a.module("grafana.panels.custom",[]);b.useModule(d),d.controller("CustomPanelCtrl",["$scope","panelSrv",function(a,b){a.panelMeta={description:"Example plugin panel"};var d={};c.defaults(a.panel,d),a.init=function(){b.init(a)},a.init()}])});
+define(["angular","app","lodash","components/panelmeta"],function(a,b,c,d){var e=a.module("grafana.panels.custom",[]);b.useModule(e),e.controller("CustomPanelCtrl",["$scope","panelSrv",function(a,b){a.panelMeta=new d({description:"A static text panel that can use plain text, markdown, or (sanitized) HTML"});var e={};c.defaults(a.panel,e),b.init(a)}])});

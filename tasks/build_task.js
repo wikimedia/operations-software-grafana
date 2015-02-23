@@ -3,8 +3,6 @@ module.exports = function(grunt) {
   // Concat and Minify the src directory into dist
   grunt.registerTask('build', [
     'jshint:source',
-    'jshint:tests',
-    'karma:test',
     'clean:on_start',
     'less:src',
     'concat:cssDark',
