@@ -81,6 +81,13 @@ define([
         expect(results[2]).to.be('target=' + encodeURIComponent("asPercent(series1,sumSeries(series1))"));
       });
 
+     it('should replace target placeholder for hidden series', function() {
+       var results = ctx.ds.buildGraphiteParams({
+         targets: [{target: 'series1', hide: true}, {target: 'sumSeries(#A)', hide: true}, {target: 'asPercent(#A,#B)'}]
+       });
+       expect(results[0]).to.be('target=' + encodeURIComponent('asPercent(series1,sumSeries(series1))'));
+     });
+
       it('should fix wrong minute interval parameters', function() {
         var results = ctx.ds.buildGraphiteParams({
           targets: [{target: "summarize(prod.25m.count, '25m', 'sum')" }]
