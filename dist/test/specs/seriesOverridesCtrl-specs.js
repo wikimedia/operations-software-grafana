@@ -1,4 +1,4 @@
-/*! grafana - v1.9.1 - 2015-02-23
+/*! grafana - v1.9.1 - 2015-10-02
  * Copyright (c) 2015 Torkel Ödegaard; Licensed Apache License */
 
 define(["helpers","panels/graph/seriesOverridesCtrl"],function(a){describe("SeriesOverridesCtrl",function(){var b=new a.ControllerTestContext;beforeEach(module("grafana.services")),beforeEach(module("grafana.panels.graph")),beforeEach(b.providePhase()),beforeEach(b.createControllerPhase("SeriesOverridesCtrl")),beforeEach(function(){b.scope.render=function(){}}),describe("When setting an override",function(){beforeEach(function(){b.scope.setOverride({propertyName:"lines"},{value:!0})}),it("should set override property",function(){expect(b.scope.override.lines).to.be(!0)}),it("should update view model",function(){expect(b.scope.currentOverrides[0].name).to.be("Lines"),expect(b.scope.currentOverrides[0].value).to.be("true")})}),describe("When removing overide",function(){it("click should include option and value index",function(){b.scope.setOverride(1,0),b.scope.removeOverride({propertyName:"lines"}),expect(b.scope.currentOverrides.length).to.be(0)})})})});
